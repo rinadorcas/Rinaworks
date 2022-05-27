@@ -14,6 +14,8 @@ const mimeTypes = {
     "css": "text/css"
 };
 
+console.log("APP IS RUNNING AT: http://localhost:3000")
+
 http.createServer(function(req, res){
     var uri = url.parse(req.url).pathname;
     var fileName = path.join(process.cwd(), unescape(uri));
@@ -30,7 +32,8 @@ http.createServer(function(req, res){
     }
 
     if(stats.isFile()){
-        var mimeTypes = mimeTypes[path.extname(fileName),split(".").reverse()[0]];
+        console.log("APP IS RUNNING HERE")
+        var mimeType = mimeTypes[path.extname(fileName).split(".").reverse()[0]];
         res.writeHead(200, {'Content-type': mimeType});
 
         var fileStream = fs.createReadStream(fileName);
