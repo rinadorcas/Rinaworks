@@ -1,0 +1,12 @@
+{
+  "name": "n",
+  "version": "1.0.0",
+  "description": "very simple server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-app":"node server.js"
+  },
+  "author": "Dorcas Okoruwe",
+  "license": "ISC"
+}
